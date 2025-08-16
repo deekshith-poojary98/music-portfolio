@@ -286,18 +286,56 @@ document.addEventListener('DOMContentLoaded', () => {
     const covers = document.querySelectorAll('.music-cover');
     console.log('Found', covers.length, 'music covers');
 
-    // Static array of unique Unsplash image URLs for music/nature themed images
+    // Array of local image paths for music cards
     const imageUrls = [
-        'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1464983953574-0892a716854b?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop'
+        'images/image1.jpg',
+        'images/image2.jpg',
+        'images/image3.jpg',
+        'images/image4.jpg',
+        'images/image5.jpg',
+        'images/image6.jpg',
+        'images/image7.jpg',
+        'images/image8.jpg',
+        'images/image9.jpg',
+        'images/image10.jpg',
+        'images/image11.jpg',
+        'images/image12.jpg',
+        'images/image13.jpg',
+        'images/image14.jpg',
+        'images/image15.jpg',
+        'images/image16.jpg',
+        'images/image17.jpg',
+        'images/image18.jpg',
+        'images/image19.jpg',
+        'images/image20.jpg',
+        'images/image21.jpg',
+        'images/image22.jpg',
+        'images/image23.jpg',
+        'images/image24.jpg',
+        'images/image25.jpg',
+        'images/image26.jpg',
+        'images/image27.jpg',
+        'images/image28.jpg',
+        'images/image29.jpg',
+        'images/image30.jpg',
+        'images/image31.jpg',
+        'images/image32.jpg',
+        'images/image33.jpg',
+        'images/image34.jpg',
+        'images/image35.jpg',
+        'images/image36.jpg',
+        'images/image37.jpg',
+        'images/image38.jpg',
+        'images/image39.jpg',
+        'images/image40.jpg',
+        'images/image41.jpg',
+        'images/image42.jpg',
+        'images/image43.jpg',
+        'images/image44.jpg',
+        'images/image45.jpg',
+        'images/image46.jpg',
+        'images/image47.jpg',
+        'images/image48.jpg'
     ];
 
     console.log('Total images available:', imageUrls.length);
@@ -344,5 +382,29 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error(`❌ Card ${index + 1}: Image failed to load:`, randomUrl);
         };
         img.src = randomUrl;
+    });
+
+    // Footer link hover effects
+    const footerLinks = document.querySelectorAll('.footer-links a');
+    footerLinks.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            link.style.transform = 'translateX(5px)';
+        });
+        
+        link.addEventListener('mouseleave', () => {
+            link.style.transform = 'translateX(0)';
+        });
+    });
+
+    // Social link hover effects
+    const socialLinks = document.querySelectorAll('.social-links a');
+    socialLinks.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            link.style.transform = 'translateY(-2px)';
+        });
+        
+        link.addEventListener('mouseleave', () => {
+            link.style.transform = 'translateY(0)';
+        });
     });
 }); 
